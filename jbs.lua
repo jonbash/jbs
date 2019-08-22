@@ -1,4 +1,4 @@
-local ripple = {}
+local jbs = {}
 
 --[[
 	Tags
@@ -88,7 +88,7 @@ function Tag:__newindex(k, v)
 end
 
 -- Creates a new tag.
-function ripple.newTag()
+function jbs.newTag()
 	return setmetatable({
 		_volume = 1,
 		_sounds = {},
@@ -289,7 +289,7 @@ function Sound:__newindex(k, v)
 end
 
 -- Creates a new sound.
-function ripple.newSound(source, options)
+function jbs.newSound(source, options)
 	options = options or {}
 	if source:typeOf 'SoundData' then
 		source = love.audio.newSource(source)
@@ -306,4 +306,4 @@ function ripple.newSound(source, options)
 	return sound
 end
 
-return ripple
+return jbs
