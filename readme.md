@@ -2,6 +2,8 @@
 
 jbs is an audio library for LÖVE that simplifies various aspects of audio handling, including tagging and playing multiple instances of a sound.
 
+It is based on the [`ripple` library by tesselode](https://github.com/tesselode/ripple). As of this writing (2019-08-22 Thursday), the code is almost entirely theirs. I'm renaming to differentiate it as I add additional functionality; in case it ends up being useful to someone else in the future, I want to avoid confusion. Still, all credit should go to tesselode for the initial creation of the library.
+
 ## Installation
 
 To use jbs, place jbs.lua in your project, and then add this code to your main.lua:
