@@ -1,14 +1,14 @@
-# Ripple
+# jbs
 
-Ripple is an audio library for LÖVE that simplifies various aspects of audio handling, including tagging and playing multiple instances of a sound.
+jbs is an audio library for LÖVE that simplifies various aspects of audio handling, including tagging and playing multiple instances of a sound.
 
 ## Installation
 
-To use Ripple, place ripple.lua in your project, and then add this code to your main.lua:
+To use jbs, place jbs.lua in your project, and then add this code to your main.lua:
 
 ```lua
-ripple = require 'ripple' -- if your ripple.lua is in the root directory
-ripple = require 'path.to.ripple' -- if it's in subfolders
+jbs = require 'jbs' -- if your jbs.lua is in the root directory
+jbs = require 'path.to.jbs' -- if it's in subfolders
 ```
 
 ## Usage
@@ -16,10 +16,10 @@ ripple = require 'path.to.ripple' -- if it's in subfolders
 ### Loading sounds
 
 ```lua
-local sound = ripple.newSound(source, options)
+local sound = jbs.newSound(source, options)
 ```
 
-Use `ripple.newSound` to load a sound.
+Use `jbs.newSound` to load a sound.
 - `source` - the Source or SoundData to use for the sound. Sources can be created using [`love.audio.newSource`](https://love2d.org/wiki/love.audio.newSource), and SoundData can be created using [`love.sound.newSoundData`](https://love2d.org/wiki/love.sound.newSoundData).
 - `options` (optional) - a table of additional options to apply to the sound. The table can have the following keys:
     - `volume` (optional) - the volume of the sound, from 0 to 1. Defaults to 1.
@@ -37,10 +37,10 @@ Plays a sound. `options` is a table with the following keys, all of which are op
 
 ### Tagging sounds
 
-To create a tag, use `ripple.newTag`:
+To create a tag, use `jbs.newTag`:
 
 ```lua
-local tag = ripple.newTag()
+local tag = jbs.newTag()
 ```
 
 You can then add tags to sounds or remove them from sounds using `sound.tag` and `sound.untag`:
@@ -100,4 +100,4 @@ Tag effects will be applied to every sound with that tag.
 
 ## Contributing
 
-This library is still in early development, so feel free to report bugs, make pull requests, or just make suggestions about the code or design of the library. To run the test project, run `lovec .` in the ripple base directory.
+This library is still in early development, so feel free to report bugs, make pull requests, or just make suggestions about the code or design of the library. To run the test project, run `lovec .` in the jbs base directory.
